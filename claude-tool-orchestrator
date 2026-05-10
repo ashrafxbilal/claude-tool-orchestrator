@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+model="${CLAUDE_ORCHESTRATOR_MODEL:-sonnet}"
+
+exec claude --agent orchestrator --model "$model" --tools Task "$@"
